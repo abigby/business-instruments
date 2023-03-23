@@ -1,0 +1,81 @@
+//== Application
+// @import "./app/shared/styles/app.scss";
+@import "../../shared/styles/app.scss";
+
+nav.topnavbar {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  /* fixes chrome jump */
+  margin-bottom: 0;
+  border-radius: 0;
+  z-index: 1050;
+  border: 0;
+  padding: 0;
+  position: relative;
+  height: 50px;
+  background: transparent linear-gradient(133deg, $purple-base 0%, $purple-deep 100%) 0% 0% no-repeat padding-box;
+
+
+  div.navbar-header {
+    display: flex;
+    position: relative;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    align-items: center;
+
+    div.navbar-start {
+      display: flex;
+      justify-content: flex-start;
+
+      div.brand-logo {
+        span {
+          color: #fff;
+          letter-spacing: 0;
+          text-align: left;
+          font-size: 24px/29px;
+          display: inline-block;
+          cursor: default;
+        }
+      }
+    }
+
+    div.navbar-actions {
+      display: flex;
+      flex: auto;
+      justify-content: flex-end;
+      padding-right: 12px;
+      float: right;
+
+      ul.navbar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li.navbar-menu-item {
+          display: inline;
+          float: left;
+          cursor: pointer;
+          width: 80px;
+          height: 50px;
+          line-height: 50px;
+          color: #fff;
+          text-align: center;
+
+          &:hover {
+            background: $purple-hover 0% 0% no-repeat padding-box;
+          }
+
+          a {
+            color: inherit;
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

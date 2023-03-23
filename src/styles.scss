@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+//== Application
+@import "./app/shared/styles/app.scss";
+
+// Variables
+@import './app/shared/styles/app/variables.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  background-color: #fff;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+
+// Main Wrapper
+div.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.is-active {
+  background-color: $purple-hover;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 800px) {
+  div.package-container {
+    flex-direction: column !important;
+  }
+}

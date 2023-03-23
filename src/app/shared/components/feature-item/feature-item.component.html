@@ -1,0 +1,25 @@
+<ng-template [ngIf]="feature">
+  <div class="feature-wrapper" [style.opacity]="feature.isPurchased == false ? '1':'0.5'" [style.background]="feature.wrapperColor ? feature.wrapperColor:'#fff'">
+    <div class="feature-wrapper-inner">
+      <span class="feature-title">
+        {{ feature.title }}
+      </span>
+      <div class="feature-details">
+        <span class="feature-price">
+          <ng-template [ngIf]="!feature.isPurchased!" [ngIfElse]="purchased" class="feature-price">
+            {{ feature.price | currency:'USD' : 'symbol' : '1.0-0' }}
+          </ng-template>
+          <ng-template #purchased class="feature-price">
+            BOUGHT!
+          </ng-template>
+        </span>
+        <p class="feature-description">
+          {{ feature.description }}
+        </p>
+        <div class="feature-actions">
+          <app-feature-button [featureId]="feature.id!" (onPackagePurchased)="onPackageSelected($event)"></app-feature-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

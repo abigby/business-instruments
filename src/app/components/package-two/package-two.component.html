@@ -1,0 +1,10 @@
+<div class="package-container" fxLayout="row">
+  <ng-container *ngIf="packageSubscription$ | async; else loading">
+    <div class="package-wrapper" *ngFor="let feature of (packageSubscription$ | async)">
+      <app-feature-item [feature]="feature"></app-feature-item>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader></app-loader>
+  </ng-template>
+</div>

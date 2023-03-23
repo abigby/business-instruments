@@ -1,0 +1,18 @@
+// Variables
+@import './../../styles/app/variables.scss';
+
+button.feature-button {
+  color: $blue;
+  width: $button-primary-width;
+  height: $button-primary-height;
+  background-color: $button-primary-bg;
+  border-radius: $button-primary-border-radius;
+  border: $button-primary-border;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0px;
+  cursor: pointer;
+  margin: 13px;
+  text-transform: uppercase;
+}
